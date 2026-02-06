@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>VictorNewb - Sign In</title>
+</head>
+<body class="login-page">
+    <main class="login-root">
+        <section class="login-card" aria-labelledby="loginHeading">
+            <h1 id="loginHeading" class="brand">VictorNewb</h1>
+            <p class="lead">Welcome back — sign in to your account.</p>
+
+            <form class="login-form" onsubmit="return authenticate();" novalidate>
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" name="email" type="email" placeholder="you@example.com" required aria-describedby="emailHelp">
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" name="password" type="password" placeholder="Your password" required aria-describedby="passwordHelp">
+
+                <div id="2faInputDiv" style="display:none;">
+                    <label for="login2FA">2FA Code</label>
+                    <input id="login2FA" name="2fa" type="text" placeholder="6-digit code or backup code" maxlength="8">
+                </div>
+
+                <div id="errorMsg" class="error" role="alert" aria-live="polite"></div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary" id="submitBtn">Sign In</button>
+                </div>
+            </form>
+
+            <p class="small">Don't have an account? <a href="signup.html">Create one</a>.</p>
+        </section>
+    </main>
+</body>
+
+<script src="auth.js"></script>
+<script src="2fa.js"></script>
+<script src="login.js"></script>
+</html>

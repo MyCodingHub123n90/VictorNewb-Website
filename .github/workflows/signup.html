@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/favicon.ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <title>VictorNewb - Sign Up</title>
+</head>
+<body class="signup-page">
+    <main class="signup-root">
+        <section class="signup-card" aria-labelledby="signupHeading">
+            <h1 id="signupHeading" class="brand">VictorNewb</h1>
+            <p class="lead">Create your account — simple and secure.</p>
+
+            <form class="signup-form" onsubmit="return validate();" novalidate>
+                <label for="emailValue">Email</label>
+                <input id="emailValue" name="email" type="email" placeholder="you@example.com" required aria-describedby="emailHelp">
+
+                <label for="passwordValue">Password</label>
+                <input id="passwordValue" name="password" type="password" placeholder="At least 6 characters" required aria-describedby="passwordHelp">
+
+                <div id="errorMsg" class="error" role="alert" aria-live="polite"></div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Create account</button>
+                </div>
+            </form>
+
+            <p class="small">By creating an account you agree to our <a href="#">Terms</a>.</p>
+        </section>
+    </main>
+    </body>
+
+    <script src="signup.js"></script>
+    </html>
